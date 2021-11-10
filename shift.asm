@@ -35,10 +35,10 @@ shift:
 
         ; Ask for index value
     	mov	        rax, 1
-	    mov	        rdi, 1
-	    mov	        rsi, msg2
-	    mov	        rdx, len2
-	    syscall
+        mov	        rdi, 1
+    	mov	        rsi, msg2
+    	mov	        rdx, len2
+    	syscall
 
         ; Look for indexBuff input
         mov         rax, 0 
@@ -51,10 +51,10 @@ shift:
 
         ; Ask for shift value
     	mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, msg1
-	    mov	        rdx, len1
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, msg1
+	mov	        rdx, len1
+	syscall
 
         ; Store in shiftBuff
         mov         rax, 0 
@@ -88,10 +88,10 @@ invalidFinish:
 
         ; print newline
         mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, newline
-	    mov	        rdx, newlen
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, newline
+	mov	        rdx, newlen
+	syscall
 
         ret
 
@@ -157,10 +157,10 @@ getInRangeLower:
 finish:
         ; print "encrypted message"
     	mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, msg4
-	    mov	        rdx, len4
-	    syscall
+	mov	        rdi, 1
+        mov	        rsi, msg4
+        mov	        rdx, len4
+        syscall
 
         ; print the finished product
         mov         rdi, fmt
@@ -170,10 +170,10 @@ finish:
 
         ; print newline
         mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, newline
-	    mov	        rdx, newlen
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, newline
+	mov	        rdx, newlen
+	syscall
 
         ret ; return back to main.asm
 
@@ -219,10 +219,10 @@ validShift:
 
         ; print "current message"
     	mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, msg3
-	    mov	        rdx, len3
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, msg3
+	mov	        rdx, len3
+	syscall
 
         ; print out original message
         mov         rdi, fmt
