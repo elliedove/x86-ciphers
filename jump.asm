@@ -40,10 +40,10 @@ jump:
 
         ; Ask for index value
     	mov	        rax, 1
-	    mov	        rdi, 1
-	    mov	        rsi, msg1
-	    mov	        rdx, len1
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, msg1
+	mov	        rdx, len1
+	syscall
 
         ; Look for indexBuff input
         mov         rax, 0 
@@ -79,10 +79,10 @@ jump:
 
         ; Print "encrypted message"
     	mov	        rax, 1
-	    mov	        rdi, 1
-	    mov	        rsi, msg5
-	    mov	        rdx, len5
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, msg5
+	mov	        rdx, len5
+	syscall
 
         ; Setup for encoding
         xor         r13, r13
@@ -110,10 +110,10 @@ encode:
 
         ; print the character
     	mov	        rax, 1
-	    mov	        rdi, 1
-	    mov	        rsi, [r14]
-	    mov	        rdx, 1
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, [r14]
+	mov	        rdx, 1
+	syscall
 
         ; next += jump
         add         r10, r8
@@ -184,10 +184,10 @@ invalidFinish:
 
         ; Print newline
         mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, newline
-	    mov	        rdx, newlen
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, newline
+	mov	        rdx, newlen
+	syscall
 
         ret
 
@@ -202,10 +202,10 @@ validJump:
         ; Print current message if valid    
         ; Print "current message"
         mov	        rax, 1
-	    mov	        rdi, 1
-	    mov	        rsi, msg2
-	    mov	        rdx, len2
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, msg2
+	mov	        rdx, len2
+	syscall
 
         ; Print original message
         mov         rdi, fmt1
@@ -219,9 +219,9 @@ finish:
         ; Finishes execution of jump.asm
         ; print newline
         mov	        rax, 1      
-	    mov	        rdi, 1
-	    mov	        rsi, newline
-	    mov	        rdx, newlen
-	    syscall
+	mov	        rdi, 1
+	mov	        rsi, newline
+	mov	        rdx, newlen
+	syscall
 
         ret ; Return back to main
